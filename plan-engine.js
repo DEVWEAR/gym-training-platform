@@ -12,13 +12,13 @@ window.DEV_PLAN_ENGINE={
   let sets=exercise.sets;if(level==='Beginner')sets=Math.min(sets,isCompound?3:2);else if(level==='Intermediate')sets=Math.min(sets,isCompound?4:3);
   return {...exercise,sets,reps:p.reps,rest:p.rest,rir:p.rir,goalNote:g.note};
  },
- progression(exercise,goal='Muscle',last={}){
+ progression(exercise,goal='Muscle',last={},history=[]){
   const weights=(last.weights||[]).map(Number).filter(x=>x>0),reps=(last.reps||[]).map(Number).filter(x=>x>0);
   if(!weights.length||!reps.length)return {state:'start',en:'First session: choose a controlled weight that lets you finish the target reps with the prescribed RIR.',ar:'أول حصة: اختر وزناً متحكماً يسمح لك بإكمال العدات المطلوبة مع الاحتفاظ بالـ RIR المحدد.'};
   const minRep=Math.min(...reps),avgW=weights.reduce((a,b)=>a+b,0)/weights.length;
   const range=(this.compoundIds.has(exercise.id)?this.goals[goal]?.compound:this.goals[goal]?.isolation)?.reps||'8–12';
   const nums=range.match(/\d+/g)?.map(Number)||[8,12],top=Math.max(...nums),bottom=Math.min(...nums);
-  if(minRep>=top)return {state:'increase',en:`Top of the rep range reached. If form and RIR were on target, consider a small load increase above ~${avgW.toFixed(1)} kg next time.`,ar:`وصلت للحد الأعلى من العدات. إذا كان الأداء والـ RIR مناسبين، جرّب زيادة بسيطة فوق حوالي ${avgW.toFixed(1)} كجم في الحصة القادمة.`};
+  const recent=(history||[]).filter(Boolean).slice(-3),stalled=recent.length===3&&recent.every((v,j,a)=>j===0||(Number(v.bestWeight)<=Number(a[j-1].bestWeight)&&Number(v.bestReps)<=Number(a[j-1].bestReps)));if(stalled)return {state:'plateau',en:'Progress has stalled across 3 logged sessions. Keep the load controlled and review recovery, technique and setup before adding weight.',ar:'التطور متوقف خلال 3 حصص مسجلة. حافظ على وزن متحكم وراجع الاستشفاء والتكنيك وإعداد التمرين قبل زيادة الوزن.'};if(minRep>=top)return {state:'increase',en:`Top of the rep range reached. If form and RIR were on target, consider a small load increase above ~${avgW.toFixed(1)} kg next time.`,ar:`وصلت للحد الأعلى من العدات. إذا كان الأداء والـ RIR مناسبين، جرّب زيادة بسيطة فوق حوالي ${avgW.toFixed(1)} كجم في الحصة القادمة.`};
   if(Math.max(...reps)<bottom)return {state:'reduce',en:'The target range was missed. Keep the load or reduce it slightly until all working sets are clean and inside the target range.',ar:'لم تصل لنطاق العدات المطلوب. ثبّت الوزن أو خففه قليلاً حتى تدخل جميع المجموعات ضمن النطاق بأداء نظيف.'};
   return {state:'reps',en:'Keep this load and try to add one clean rep where possible before increasing weight.',ar:'حافظ على نفس الوزن وحاول إضافة عدة نظيفة حيث تستطيع قبل زيادة الوزن.'};
  },
