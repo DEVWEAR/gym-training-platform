@@ -15,9 +15,9 @@ const repAliases={
 'back-squat':'barbell-back-squat','front-squat':'barbell-front-squat','hack-squat':'hack-squat','leg-press':'leg-press','leg-extension':'leg-extension','bulgarian-split-squat':'bulgarian-split-squat',
 'rdl':'barbell-romanian-deadlift','db-rdl':'dumbbell-romanian-deadlift','seated-leg-curl':'seated-leg-curl','lying-leg-curl':'lying-leg-curl','hip-thrust':'barbell-hip-thrust','glute-kickback':'cable-glute-kickback',
 'hip-abduction':'hip-abduction-machine','hip-adduction':'hip-adduction-machine','standing-calf':'standing-calf-raise','seated-calf':'seated-calf-raise',
-'cable-crunch':'cable-crunch','machine-crunch':'machine-seated-crunch','hanging-leg-raise':'hanging-leg-raise','reverse-crunch':'reverse-crunches','pallof-press':'cable-pallof-press','plank':'plank','push-up':'push-up','weighted-push-up':'weighted-push-up','wide-push-up':'wide-grip-push-up','dumbbell-pullover':'dumbbell-pullover','band-chest-press':'resistance-band-chest-press','band-chest-fly':'resistance-band-chest-fly'
+'cable-crunch':'cable-crunch','machine-crunch':'ab-crunch-machine','hanging-leg-raise':'hanging-leg-raise','reverse-crunch':'reverse-crunch','pallof-press':'pallof-press','cable-woodchop':'cable-woodchop','plank':'plank','push-up':'push-up','weighted-push-up':'weighted-push-up','wide-push-up':'wide-grip-push-up','dumbbell-pullover':'dumbbell-pullover','band-chest-press':'resistance-band-chest-press','band-chest-fly':'resistance-band-chest-fly'
 };
-const repUnavailable=new Set(['incline-machine-press','low-high-cable-fly','mid-cable-fly','single-arm-cable-fly','high-to-low-fly','bayesian-curl','cable-woodchop',
+const repUnavailable=new Set(['incline-machine-press','low-high-cable-fly','mid-cable-fly','single-arm-cable-fly','high-to-low-fly','bayesian-curl',
 'incline-plate-press','incline-cable-fly','single-arm-low-high-fly','reverse-grip-bench','plate-loaded-chest-press','standing-cable-chest-press','single-arm-cable-chest-press','seated-cable-chest-press','decline-machine-press','single-arm-high-low-fly','svend-press']);
 function repSlug(x){return repAliases[x.id]||x.id}
 function norm(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
