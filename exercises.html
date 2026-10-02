@@ -6,8 +6,8 @@ const repAliases={
 'flat-db-press':'dumbbell-bench-press','flat-bb-press':'barbell-bench-press','flat-smith-press':'smith-machine-bench-press','chest-press-machine':'machine-chest-press',
 'db-chest-fly':'dumbbell-fly','pec-deck-fly':'pec-deck','cable-fly':'cable-fly','decline-db-press':'decline-bench-press','decline-bb-press':'decline-barbell-bench-press',
 'decline-smith-press':'smith-machine-decline-bench-press','decline-db-fly':'decline-dumbbell-fly','chest-dips':'chest-dips',
-'lat-pulldown':'lat-pulldown','one-arm-pulldown':'one-arm-lat-pulldown','straight-arm-pulldown':'straight-arm-pulldown','pull-up':'pull-up',
-'barbell-row':'bent-over-barbell-row','seated-row':'seated-cable-row','one-arm-db-row':'single-arm-dumbbell-row','chest-supported-row':'chest-supported-dumbbell-row','tbar-row':'t-bar-row','back-extension':'back-extension','good-morning':'good-morning',
+'lat-pulldown':'lat-pulldown','neutral-pulldown':'neutral-grip-lat-pulldown','one-arm-pulldown':'one-arm-lat-pulldown','straight-arm-pulldown':'straight-arm-pulldown','pull-up':'pull-up',
+'barbell-row':'bent-over-barbell-row','seated-row':'seated-cable-row','one-arm-db-row':'single-arm-dumbbell-row','chest-supported-row':'chest-supported-dumbbell-row','tbar-row':'t-bar-row','back-extension':'back-extension','good-morning':'barbell-good-morning',
 'db-shoulder-press':'dumbbell-shoulder-press','bb-overhead-press':'barbell-overhead-press','machine-shoulder-press':'machine-shoulder-press','front-raise':'dumbbell-front-raise',
 'lateral-raise':'dumbbell-lateral-raise','cable-lateral':'cable-lateral-raise','machine-lateral':'plate-loaded-lateral-raise','reverse-pec-deck':'rear-delt-fly','rear-delt-cable':'cable-rear-delt-fly','rear-delt-db':'rear-delt-fly','face-pull':'cable-face-pull',
 'ez-curl':'ez-bar-curl','preacher-curl':'preacher-curl','concentration-curl':'concentration-curl','incline-curl':'incline-dumbbell-curl','hammer-curl':'dumbbell-hammer-curl','rope-hammer-curl':'cable-hammer-curl',
@@ -17,7 +17,7 @@ const repAliases={
 'hip-abduction':'machine-hip-abduction','hip-adduction':'hip-adduction','standing-calf':'standing-calf-raise','seated-calf':'seated-calf-raise',
 'cable-crunch':'cable-crunch','machine-crunch':'machine-seated-crunch','hanging-leg-raise':'hanging-leg-raise','reverse-crunch':'reverse-crunches','pallof-press':'cable-pallof-press','plank':'plank','push-up':'push-up','weighted-push-up':'weighted-push-up','wide-push-up':'wide-grip-push-up','dumbbell-pullover':'dumbbell-pullover','band-chest-press':'resistance-band-chest-press','band-chest-fly':'resistance-band-chest-fly'
 };
-const repUnavailable=new Set(['incline-machine-press','low-high-cable-fly','mid-cable-fly','single-arm-cable-fly','high-to-low-fly','neutral-pulldown','bayesian-curl','cable-woodchop',
+const repUnavailable=new Set(['incline-machine-press','low-high-cable-fly','mid-cable-fly','single-arm-cable-fly','high-to-low-fly','bayesian-curl','cable-woodchop',
 'incline-plate-press','incline-cable-fly','single-arm-low-high-fly','reverse-grip-bench','plate-loaded-chest-press','standing-cable-chest-press','single-arm-cable-chest-press','seated-cable-chest-press','decline-machine-press','single-arm-high-low-fly','svend-press']);
 function repSlug(x){return repAliases[x.id]||x.id}
 function norm(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
