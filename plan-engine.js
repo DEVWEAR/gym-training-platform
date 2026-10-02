@@ -4,12 +4,12 @@ window.DEV_PLAN_ENGINE={
   Muscle:{label:{en:'Build Muscle',ar:'بناء العضلات'},compound:{reps:'6–10',rest:'120–180s',rir:'1–2'},isolation:{reps:'10–15',rest:'60–90s',rir:'1–2'},note:{en:'Progress load or reps while keeping clean technique.',ar:'زد الوزن أو العدات تدريجياً مع الحفاظ على الأداء الصحيح.'}},
   Cut:{label:{en:'Fat Loss / Cut',ar:'تنشيف / خسارة الدهون'},compound:{reps:'6–12',rest:'90–180s',rir:'1–3'},isolation:{reps:'10–15',rest:'60–90s',rir:'1–3'},note:{en:'Keep resistance training productive while managing fatigue during the calorie deficit.',ar:'حافظ على تدريب مقاومة فعّال مع إدارة التعب أثناء عجز السعرات.'}},
   Strength:{label:{en:'Strength',ar:'القوة'},compound:{reps:'3–6',rest:'180–300s',rir:'1–3'},isolation:{reps:'8–12',rest:'75–120s',rir:'1–2'},note:{en:'Prioritize heavy compounds, quality reps and longer recovery.',ar:'الأولوية للتمارين المركبة الثقيلة، جودة العدات وراحة أطول.'}},
-  Maintain:{label:{en:'Maintain',ar:'المحافظة'},compound:{reps:'6–10',rest:'120s',rir:'2–3'},isolation:{reps:'10–15',rest:'60–90s',rir:'2–3'},note:{en:'Maintain performance with moderate volume and recoverable effort.',ar:'حافظ على الأداء بحجم تدريبي متوسط ومجهود يسمح بالاستشفاء.'}}
+  Maintain:{label:{en:'Maintain',ar:'المحافظة'},compound:{reps:'6–10',rest:'120–180s',rir:'2–3'},isolation:{reps:'10–15',rest:'60–90s',rir:'2–3'},note:{en:'Maintain performance with moderate volume and recoverable effort.',ar:'حافظ على الأداء بحجم تدريبي متوسط ومجهود يسمح بالاستشفاء.'}}
  },
  compoundIds:new Set(['incline-db-press','incline-bb-press','incline-smith-press','incline-machine-press','incline-plate-press','reverse-grip-bench','flat-db-press','flat-bb-press','flat-smith-press','chest-press-machine','plate-loaded-chest-press','push-up','weighted-push-up','wide-push-up','chest-dips','standing-cable-chest-press','single-arm-cable-chest-press','seated-cable-chest-press','decline-db-press','decline-bb-press','decline-smith-press','decline-machine-press','dumbbell-pullover','band-chest-press','lat-pulldown','neutral-pulldown','one-arm-pulldown','pull-up','barbell-row','seated-row','one-arm-db-row','chest-supported-row','tbar-row','good-morning','db-shoulder-press','bb-overhead-press','machine-shoulder-press','close-grip-press','back-squat','front-squat','hack-squat','leg-press','bulgarian-split-squat','rdl','db-rdl','hip-thrust']),
  prescribe(exercise,goal='Muscle',level='Advanced'){
   const g=this.goals[goal]||this.goals.Muscle,isCompound=this.compoundIds.has(exercise.id),p=isCompound?g.compound:g.isolation;
-  let sets=exercise.sets;if(level==='Beginner')sets=Math.min(sets,3);
+  let sets=exercise.sets;if(level==='Beginner')sets=Math.min(sets,isCompound?3:2);else if(level==='Intermediate')sets=Math.min(sets,isCompound?4:3);
   return {...exercise,sets,reps:p.reps,rest:p.rest,rir:p.rir,goalNote:g.note};
  },
  progression(exercise,goal='Muscle',last={}){
