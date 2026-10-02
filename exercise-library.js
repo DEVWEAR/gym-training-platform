@@ -17,7 +17,7 @@ window.DEV_EXERCISES = [
 {id:'seated-cable-chest-press',cat:'chest',sub:'mid',en:'Seated Cable Chest Press',ar:'ضغط صدر كيبل جالس',eq:'cable',sets:3,reps:'10–15',rest:'60–75s',rir:'1–2'},
 {id:'decline-machine-press',cat:'chest',sub:'lower',en:'Decline Chest Press Machine',ar:'ضغط صدر سفلي جهاز',eq:'machine',sets:3,reps:'8–12',rest:'90s',rir:'1–2'},
 {id:'single-arm-high-low-fly',cat:'chest',sub:'lower',en:'Single-Arm High-to-Low Cable Fly',ar:'تفتيح كيبل يد واحدة من أعلى لأسفل',eq:'cable',sets:3,reps:'10–15/side',rest:'60s',rir:'1–2'},
-{id:'svend-press',cat:'chest',sub:'mid',en:'Svend Press',ar:'سفيند برس',eq:'machine',sets:3,reps:'12–20',rest:'60s',rir:'1–2'},
+{id:'svend-press',cat:'chest',sub:'mid',en:'Svend Press',ar:'سفيند برس',eq:'plate',sets:3,reps:'12–20',rest:'60s',rir:'1–2'},
 {id:'dumbbell-pullover',cat:'chest',sub:'mid',en:'Dumbbell Pullover',ar:'دمبل بول أوفر',eq:'dumbbell',sets:3,reps:'10–15',rest:'75s',rir:'1–2'},
 {id:'band-chest-press',cat:'chest',sub:'mid',en:'Resistance-Band Chest Press',ar:'ضغط صدر بحبل مقاومة',eq:'bodyweight',sets:3,reps:'12–20',rest:'60s',rir:'1–2'},
 {id:'band-chest-fly',cat:'chest',sub:'mid',en:'Resistance-Band Chest Fly',ar:'تفتيح صدر بحبل مقاومة',eq:'bodyweight',sets:3,reps:'12–20',rest:'60s',rir:'1–2'},
