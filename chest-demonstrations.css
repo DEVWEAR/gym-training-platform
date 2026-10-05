@@ -1,0 +1,12 @@
+/* Keep both positions in the original illustration visible on its exercise card. */
+.chestDemoImage{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
+.chestHelp{margin-top:10px;text-align:start}
+.chestHelpButton{font:inherit;font-size:12px;padding:7px 10px;border:1px solid #ffffff30;border-radius:9px;background:#15181e;color:#fff;cursor:pointer}
+.chestHelpButton:focus-visible{outline:2px solid #ff3838;outline-offset:3px}
+.chestHelpText{margin-top:8px;font-size:13px;line-height:1.5;color:#b9bdc5}
+.chestHelpText p{margin:5px 0}
+.chestHelpText b{color:#fff}
+.exercise .exerciseName{display:block}
+.quickExercise .quickExerciseName{display:block;flex:1;min-width:0}
+.quickExercise .quickExerciseVisual{max-width:100%}
+@media(max-width:600px){.quickExercise{flex-wrap:wrap}.quickExercise .quickExerciseVisual{flex:0 0 100%;width:100%;height:auto;aspect-ratio:2/1}.quickExercise .quickExerciseName{flex-basis:65%}}
