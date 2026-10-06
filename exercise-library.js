@@ -30,6 +30,7 @@ window.DEV_EXERCISES = [
 {id:'db-chest-fly',cat:'chest',sub:'mid',en:'Dumbbell Chest Fly',ar:'تفتيح صدر دمبل',eq:'dumbbell',sets:3,reps:'10–15',rest:'75s',rir:'1–2'},
 {id:'pec-deck-fly',cat:'chest',sub:'mid',en:'Pec Deck Fly',ar:'تفتيح صدر بيك ديك',eq:'machine',sets:3,reps:'10–15',rest:'60–75s',rir:'1–2'},
 {id:'cable-fly',cat:'chest',sub:'mid',en:'Cable Fly / Crossover',ar:'تفتيح كيبل / كروس أوفر',eq:'cable',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
+{id:'flat-cable-fly-bench',cat:'chest',sub:'mid',en:'Flat Cable Fly on Bench',ar:'تفتيح كيبل على بنش مستوي',eq:'cable',sets:3,reps:'10–15',rest:'60–75s',rir:'1–2'},
 {id:'mid-cable-fly',cat:'chest',sub:'mid',en:'Mid Cable Fly',ar:'تفتيح كيبل متوسط',eq:'cable',sets:3,reps:'10–15',rest:'60–75s',rir:'1–2'},
 {id:'single-arm-cable-fly',cat:'chest',sub:'mid',en:'Single-Arm Cable Fly',ar:'تفتيح كيبل يد واحدة',eq:'cable',sets:3,reps:'10–15/side',rest:'60s',rir:'1–2'},
 {id:'decline-db-press',cat:'chest',sub:'lower',en:'Decline Dumbbell Press',ar:'ضغط دمبل صدر سفلي',eq:'dumbbell',sets:3,reps:'8–12',rest:'90s',rir:'1–2'},
