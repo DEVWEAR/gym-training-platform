@@ -36,7 +36,7 @@ window.DEV_CHEST_UI = {
     const demo = this.demo(x);
     if (!demo) return '';
     const name = this.escape(lang === 'ar' ? x.ar : x.en);
-    return '<img class="chestDemoImage" loading="lazy" src="'+demo.image+'" alt="'+name+' — '+(lang === 'ar' ? 'وضعيتا الحركة' : 'movement positions')+'">';
+    return '<img class="chestDemoImage" loading="eager" decoding="async" fetchpriority="high" src="'+demo.image+'" alt="'+name+' — '+(lang === 'ar' ? 'وضعيتا الحركة' : 'movement positions')+'">';
   },
   help(x, lang, prefix) {
     const demo = this.demo(x);
