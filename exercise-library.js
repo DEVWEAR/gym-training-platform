@@ -52,6 +52,8 @@ window.DEV_EXERCISES = [
 {id:'one-arm-seated-row',cat:'back',sub:'upper',en:'Single-Arm Seated Cable Row',ar:'تجديف كيبل جالس يد واحدة',eq:'cable',sets:3,reps:'10–12',rest:'75s',rir:'1–2'},
 {id:'smith-row',cat:'back',sub:'upper',en:'Smith Machine Bent-Over Row',ar:'تجديف بار سميث منحني',eq:'machine',sets:3,reps:'10–12',rest:'75s',rir:'1–2'},
 
+{id:'rope-straight-arm-pulldown',cat:'back',sub:'lats',en:'Rope Straight-Arm Pulldown',ar:'سحب كيبل بالحبل بذراعين شبه مستقيمتين',eq:'cable',sets:3,reps:'10–15',rest:'60–75s',rir:'1–2'},
+
 {id:'db-shoulder-press',cat:'shoulders',sub:'front',en:'Dumbbell Shoulder Press',ar:'ضغط كتف دمبل',eq:'dumbbell',sets:3,reps:'8–12',rest:'90s',rir:'1–2'},
 {id:'bb-overhead-press',cat:'shoulders',sub:'front',en:'Barbell Overhead Press',ar:'ضغط كتف بار',eq:'barbell',sets:3,reps:'6–10',rest:'120s',rir:'1–2'},
 {id:'machine-shoulder-press',cat:'shoulders',sub:'front',en:'Machine Shoulder Press',ar:'ضغط كتف جهاز',eq:'machine',sets:3,reps:'8–12',rest:'90s',rir:'1–2'},
