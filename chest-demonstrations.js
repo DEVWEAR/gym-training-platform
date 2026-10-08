@@ -31,7 +31,7 @@ window.DEV_CHEST_DEMOS = Object.freeze({
 });
 
 window.DEV_CHEST_UI = {
-  demo(x) { return x.cat === 'chest' ? window.DEV_CHEST_DEMOS[x.id] : null; },
+  demo(x) { return (x.cat === 'chest' ? window.DEV_CHEST_DEMOS[x.id] : (window.DEV_BACK_DEMOS || {})[x.id]) || null; },
   image(x, lang) {
     const demo = this.demo(x);
     if (!demo) return '';
