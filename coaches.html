@@ -8,7 +8,11 @@
 <style>
 *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Arial,Tahoma,sans-serif;color:#f5f8fa;background:radial-gradient(circle at 15% 12%,#b7ff6812,transparent 32%),radial-gradient(circle at 88% 3%,#78e7ff1a,transparent 38%),#101b21}.wrap{max-width:980px;margin:auto;padding:22px 18px 120px}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border:1px solid #ffffff1c;border-radius:22px;background:#17252dc9}.brand{font-size:17px;font-weight:900;letter-spacing:3px}.brand span{color:#78e7ff}.back{color:#f5f8fa;text-decoration:none;border:1px solid #ffffff24;border-radius:50px;padding:11px 18px}.hero{padding:90px 12px 55px;text-align:center}.eyebrow{color:#b7ff68;font-size:14px;font-weight:800;letter-spacing:1px}.hero h1{font-size:clamp(38px,8vw,72px);line-height:1.2;margin:18px 0}.hero h1 span{color:#78e7ff}.hero p{color:#a7b4bc;font-size:clamp(16px,3vw,20px);line-height:1.9;max-width:650px;margin:0 auto}.panel{background:linear-gradient(150deg,#1a2a32,#142128);border:1px solid #ffffff1c;border-radius:28px;padding:42px 24px;text-align:center;box-shadow:0 24px 65px #0003}.symbol{width:72px;height:72px;border-radius:24px;background:linear-gradient(135deg,#78e7ff,#b7ff68);display:grid;place-items:center;color:#0d171d;font-size:36px;margin:0 auto 22px}.panel h2{margin:0 0 12px;font-size:28px}.panel p{color:#a7b4bc;line-height:1.9;max-width:560px;margin:auto}.note{color:#7f949f;text-align:center;font-size:13px;margin-top:26px}@media(max-width:550px){.wrap{padding:14px 12px 100px}.hero{padding:68px 4px 45px}.panel{padding:36px 18px}.nav{padding:14px}}
 </style>
-</head>
+<style>
+.devAppNav{position:fixed;left:50%;bottom:8px;transform:translateX(-50%);z-index:40;width:min(680px,calc(100% - 16px));display:grid;grid-template-columns:repeat(5,1fr);align-items:end;padding:8px 10px calc(8px + env(safe-area-inset-bottom));border:1px solid #fff;border-radius:22px;background:#f3f6f5f2;backdrop-filter:blur(20px);box-shadow:0 18px 55px #0008;direction:rtl}
+.devNavItem{border:0;background:transparent;color:#66747a;min-height:52px;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;font-weight:800;cursor:pointer}.devNavIcon{font-size:20px;line-height:1}.devNavIcon svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.devNavItem.active{color:#0e181c;background:#dce7e8}.devNavItem.active .devNavIcon{color:#0b9fbd}.devNavCenter{transform:translateY(-13px);color:#0e181c}.devNavCenter .devNavIcon{width:47px;height:47px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,#78e7ff,#b7ff68);color:#0c171b;box-shadow:0 10px 25px #78e7ff55}.devNavCenter.active{background:transparent}.devNavCenter.active .devNavIcon{color:#0c171b}
+body{padding-bottom:100px}
+</style></head>
 <body>
 <main class="wrap">
 <header class="nav"><div class="brand"><span>DEV</span> COACHES</div><a class="back" href="index.html">الرئيسية ←</a></header>
@@ -16,4 +20,9 @@
 <section class="panel"><div class="symbol">✦</div><h2>قريباً</h2><p>نعمل على تصميم صفحة المدربين من البداية. ما فيه مدربين معروضين حالياً إلى أن تجهز التجربة الجديدة.</p></section>
 <p class="note">DEV TRAINING</p>
 </main>
-</body></html>
+<nav class="devAppNav" aria-label="DEV app navigation">
+<button class="devNavItem" onclick="location.href='index.html'"><span class="devNavIcon"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M9.5 20v-6h5v6"/></svg></span><span>الرئيسية</span></button>
+<button class="devNavItem" onclick="location.href='training.html'"><span class="devNavIcon"><svg viewBox="0 0 24 24"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></span><span>التمارين</span></button>
+<button class="devNavItem devNavCenter active" onclick="location.href='coaches.html'"><span class="devNavIcon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.7-4 3-6 7-6s6.3 2 7 6"/><path d="M4 7h3M17 7h3"/></svg></span><span>المدربين</span></button>
+<button class="devNavItem" onclick="location.href='progress.html'"><span class="devNavIcon"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3"/></svg></span><span>تقدمي</span></button>
+</nav></body></html>
