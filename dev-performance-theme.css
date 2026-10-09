@@ -41,3 +41,29 @@ body:before{background:radial-gradient(circle at 82% 2%,#C8323214,transparent 32
 .progress i{background:var(--dev-accent)!important}
 input,select,textarea{accent-color:var(--dev-accent);color-scheme:dark}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #E58A8A!important;outline-offset:3px}
+
+/* Page-specific DEV Performance overrides — preserve layout and interaction. */
+body{background-color:#111418!important}
+.nav,.top{background:#20252BF0!important;border-color:#FFFFFF20!important;color:#F2F3F4!important}
+.brand span,.top span,.eyebrow,.hero h1 span,.red{color:#C83232!important}
+.hero{color:#F2F3F4!important}
+.panel,.card,.stat,.bestItem,.planDay,.weekPlan,.hold,.choice,.quickSheet,.sheet{
+ background:#20252B!important;border-color:#FFFFFF20!important;color:#F2F3F4!important
+}
+.stat:before{background:linear-gradient(90deg,#C83232,transparent)!important}
+.planDay:hover,.card.link:hover{border-color:#C8323277!important}
+.status,.prBadge,.up,.tag{color:#E18C8C!important}
+.tag{background:#C8323222!important}
+.btn,button:not(.devNavItem):not(.devNavCenter):not(.primary):not(.startWorkout):not(.quickAdd){
+ border-color:#FFFFFF30
+}
+button.active:not(.devNavItem):not(.devNavCenter),.active:not(.devNavItem):not(.devNavCenter):not(.devNavIcon){
+ background:#C83232!important;color:#fff!important;border-color:#C83232!important
+}
+.option button.active{background:#C83232!important;color:#fff!important;border-color:#C83232!important}
+.symbol{background:#C83232!important;color:#fff!important}
+.nav,.devAppNav,.top{backdrop-filter:blur(18px)}
+/* Theme on the training, coaches and settings pages uses one consistent bottom bar. */
+.devAppNav,.devBottomNav,.bottomNav{background:#20252BF5!important;border:1px solid #FFFFFF20!important}
+.devNavItem.active .devNavIcon,.devNavItem.active{color:#E18C8C!important}
+.devNavCenter .devNavIcon{background:#C83232!important;color:#fff!important}
