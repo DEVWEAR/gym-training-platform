@@ -60,7 +60,7 @@ window.DEV_EXERCISES = [
 {id:'smith-shrugs',cat:'shoulders',sub:'traps',en:'Smith Machine Shrugs',ar:'هز الكتف بالسميث',eq:'machine',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
 {id:'behind-back-smith-shrugs',cat:'shoulders',sub:'traps',en:'Behind-the-Back Smith Shrugs',ar:'هز الكتف بالسميث خلف الجسم',eq:'machine',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
 {id:'barbell-upright-row',cat:'shoulders',sub:'side',en:'Barbell Upright Row',ar:'سحب بار عمودي',eq:'barbell',sets:3,reps:'10–12',rest:'75s',rir:'2'},
-{id:'barbell-upright-row-alt',cat:'shoulders',sub:'side',en:'Barbell Upright Row (Alternative Demonstration)',ar:'سحب بار عمودي — عرض بديل',eq:'barbell',sets:3,reps:'10–12',rest:'75s',rir:'2'},
+{id:'barbell-upright-row-alt',cat:'shoulders',sub:'front',en:'Barbell Upright Row (Alternative Demonstration)',ar:'سحب بار عمودي — عرض بديل',eq:'barbell',sets:3,reps:'10–12',rest:'75s',rir:'2'},
 {id:'single-arm-cable-lateral',cat:'shoulders',sub:'side',en:'Single-Arm Cable Lateral Raise',ar:'رفرفة جانبية كيبل يد واحدة',eq:'cable',sets:3,reps:'12–15',rest:'60s',rir:'1–2'},
 {id:'smith-shoulder-press',cat:'shoulders',sub:'front',en:'Smith Machine Shoulder Press',ar:'ضغط كتف سميث',eq:'machine',sets:3,reps:'8–12',rest:'90s',rir:'1–2'},
 {id:'db-shoulder-press',cat:'shoulders',sub:'front',en:'Dumbbell Shoulder Press',ar:'ضغط كتف دمبل',eq:'dumbbell',sets:3,reps:'8–12',rest:'90s',rir:'1–2'},
