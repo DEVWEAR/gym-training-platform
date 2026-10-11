@@ -54,6 +54,11 @@ window.DEV_EXERCISES = [
 
 {id:'rope-straight-arm-pulldown',cat:'back',sub:'lats',en:'Rope Straight-Arm Pulldown',ar:'سحب كيبل بالحبل بذراعين شبه مستقيمتين',eq:'cable',sets:3,reps:'10–15',rest:'60–75s',rir:'1–2'},
 
+{id:'cable-shrugs',cat:'shoulders',sub:'traps',en:'Cable Shrugs',ar:'هز الكتف بالكيبل',eq:'cable',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
+{id:'dumbbell-shrugs',cat:'shoulders',sub:'traps',en:'Dumbbell Shrugs',ar:'هز الكتف بالدمبل',eq:'dumbbell',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
+{id:'barbell-shrugs',cat:'shoulders',sub:'traps',en:'Barbell Shrugs',ar:'هز الكتف بالبار',eq:'barbell',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
+{id:'smith-shrugs',cat:'shoulders',sub:'traps',en:'Smith Machine Shrugs',ar:'هز الكتف بالسميث',eq:'machine',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
+{id:'behind-back-smith-shrugs',cat:'shoulders',sub:'traps',en:'Behind-the-Back Smith Shrugs',ar:'هز الكتف بالسميث خلف الجسم',eq:'machine',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
 {id:'barbell-upright-row',cat:'shoulders',sub:'side',en:'Barbell Upright Row',ar:'سحب بار عمودي',eq:'barbell',sets:3,reps:'10–12',rest:'75s',rir:'2'},
 {id:'barbell-upright-row-alt',cat:'shoulders',sub:'side',en:'Barbell Upright Row (Alternative Demonstration)',ar:'سحب بار عمودي — عرض بديل',eq:'barbell',sets:3,reps:'10–12',rest:'75s',rir:'2'},
 {id:'single-arm-cable-lateral',cat:'shoulders',sub:'side',en:'Single-Arm Cable Lateral Raise',ar:'رفرفة جانبية كيبل يد واحدة',eq:'cable',sets:3,reps:'12–15',rest:'60s',rir:'1–2'},
