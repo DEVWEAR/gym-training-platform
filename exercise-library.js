@@ -79,7 +79,6 @@ window.DEV_EXERCISES = [
 {id:'db-preacher-curl',cat:'arms',sub:'biceps-short',en:'Dumbbell Preacher Curl',ar:'بايسبس سكوت دمبل',eq:'dumbbell',sets:3,reps:'10–12',rest:'60–75s',rir:'1–2'},
 {id:'ez-preacher-curl',cat:'arms',sub:'biceps-short',en:'EZ-Bar Preacher Curl',ar:'بايسبس سكوت بار زقزاق',eq:'barbell',sets:3,reps:'10–12',rest:'60–75s',rir:'1–2'},
 {id:'standing-db-curl',cat:'arms',sub:'biceps-long',en:'Standing Dumbbell Curl',ar:'بايسبس دمبل واقف',eq:'dumbbell',sets:3,reps:'10–12',rest:'60–75s',rir:'1–2'},
-{id:'standing-hammer-curl',cat:'arms',sub:'brachialis',en:'Standing Dumbbell Hammer Curl',ar:'هامر دمبل واقف',eq:'dumbbell',sets:3,reps:'10–12',rest:'60–75s',rir:'1–2'},
 {id:'single-arm-preacher-curl',cat:'arms',sub:'biceps-short',en:'Single-Arm Dumbbell Preacher Curl',ar:'بايسبس سكوت دمبل يد واحدة',eq:'dumbbell',sets:3,reps:'10–12',rest:'60–75s',rir:'1–2'},
 {id:'triceps-bar-hammer-curl',cat:'arms',sub:'brachialis',en:'Neutral-Grip Triceps-Bar Hammer Curl',ar:'هامر بالبار المستطيل',eq:'barbell',sets:3,reps:'10–12',rest:'60–75s',rir:'1–2'},
 {id:'standing-ez-curl',cat:'arms',sub:'biceps-short',en:'Standing EZ-Bar Curl',ar:'بايسبس بار زقزاق واقف',eq:'barbell',sets:3,reps:'10–12',rest:'60–75s',rir:'1–2'},
