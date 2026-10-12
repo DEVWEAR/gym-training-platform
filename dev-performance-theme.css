@@ -85,3 +85,20 @@ body{padding-bottom:max(112px,calc(92px + env(safe-area-inset-bottom,0px)))}
  .quickExerciseVisual img{width:100%;height:auto;object-fit:contain}
  .quickExerciseName{flex:1 1 100%}
 }
+
+/* Full-height mobile exercise picker: retain scrolling, remove unnecessary black gap. */
+@media(max-width:650px){
+ .quickPicker{
+  inset:0!important;
+  padding:calc(env(safe-area-inset-top,0px) + 6px) 8px calc(env(safe-area-inset-bottom,0px) + 8px)!important;
+  align-items:stretch!important;
+ }
+ .quickSheet{
+  height:100%!important;
+  max-height:100%!important;
+  border-radius:20px!important;
+  padding-bottom:calc(130px + env(safe-area-inset-bottom,0px))!important;
+  scroll-padding-bottom:120px;
+ }
+ .quickList{padding-bottom:24px}
+}
