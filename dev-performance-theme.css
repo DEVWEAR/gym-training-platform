@@ -67,3 +67,21 @@ button.active:not(.devNavItem):not(.devNavCenter),.active:not(.devNavItem):not(.
 .devAppNav,.devBottomNav,.bottomNav{background:#20252BF5!important;border:1px solid #FFFFFF20!important}
 .devNavItem.active .devNavIcon,.devNavItem.active{color:#E18C8C!important}
 .devNavCenter .devNavIcon{background:#C83232!important;color:#fff!important}
+
+/* Mobile viewport and fixed navigation accessibility fixes */
+html,body{max-width:100%;overflow-x:clip}
+body{padding-bottom:max(112px,calc(92px + env(safe-area-inset-bottom,0px)))}
+.quickPicker{padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(106px + env(safe-area-inset-bottom,0px))!important;align-items:stretch!important;z-index:65!important;overflow:hidden}
+.quickSheet{height:100%!important;max-height:100%!important;min-height:0!important;overflow-y:auto!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:calc(36px + env(safe-area-inset-bottom,0px))!important}
+.quickTop{top:-20px;z-index:2}
+.quickBody,.quickList,.quickExercise,.quickExerciseName{min-width:0}
+.quickExerciseName{overflow-wrap:anywhere}
+.devAppNav{bottom:max(8px,env(safe-area-inset-bottom,0px))!important}
+@media(max-width:650px){
+ .quickPicker{padding:calc(8px + env(safe-area-inset-top,0px)) 8px calc(104px + env(safe-area-inset-bottom,0px))!important}
+ .quickSheet{width:100%!important;border-radius:20px!important;padding:16px!important;padding-bottom:36px!important}
+ .quickExercise{flex-wrap:wrap}
+ .quickExerciseVisual{max-width:100%;flex:0 0 100%!important;width:100%!important;height:auto!important;min-height:130px}
+ .quickExerciseVisual img{width:100%;height:auto;object-fit:contain}
+ .quickExerciseName{flex:1 1 100%}
+}
