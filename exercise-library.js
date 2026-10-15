@@ -119,6 +119,8 @@ window.DEV_EXERCISES = [
 {id:'nordic-hamstring-curl',cat:'legs',sub:'hamstrings',en:'Nordic Hamstring Curl',ar:'نورديك للفخذ الخلفي',eq:'bodyweight',sets:3,reps:'5–8',rest:'120s',rir:'1–2'},
 {id:'cable-standing-leg-curl',cat:'legs',sub:'hamstrings',en:'Cable Standing Leg Curl',ar:'ليج كيرل بالكيبل واقف',eq:'cable',sets:3,reps:'10–15/side',rest:'75s',rir:'1–2'},
 {id:'hip-thrust',cat:'legs',sub:'glutes',en:'Hip Thrust',ar:'هيب ثرست',eq:'barbell',sets:4,reps:'8–12',rest:'90–120s',rir:'1–2'},
+{id:'dumbbell-glute-bridge',cat:'legs',sub:'glutes',en:'Dumbbell Glute Bridge',ar:'جسر المؤخرة بالدمبل',eq:'dumbbell',sets:3,reps:'10–15',rest:'60–90s',rir:'1–2'},
+{id:'smith-hip-thrust',cat:'legs',sub:'glutes',en:'Smith Machine Hip Thrust',ar:'هيب ثرست بجهاز السميث',eq:'machine',sets:3,reps:'8–12',rest:'90s',rir:'1–2'},
 {id:'glute-kickback',cat:'legs',sub:'glutes',en:'Cable Glute Kickback',ar:'ركلة خلفية للمؤخرة كيبل',eq:'cable',sets:3,reps:'12–15/side',rest:'60s',rir:'1–2'},
 {id:'hip-abduction',cat:'legs',sub:'glutes',en:'Hip Abduction Machine',ar:'جهاز فتح الورك',eq:'machine',sets:3,reps:'12–20',rest:'60s',rir:'1–2'},
 {id:'hip-adduction',cat:'legs',sub:'adductors',en:'Hip Adduction Machine',ar:'جهاز ضم الورك',eq:'machine',sets:3,reps:'12–20',rest:'60s',rir:'1–2'},
