@@ -97,7 +97,7 @@ window.DEV_EXERCISES = [
 {id:'db-overhead-triceps',cat:'arms',sub:'triceps-long',en:'Dumbbell Overhead Extension',ar:'تمديد ترايسبس دمبل فوق الرأس',eq:'dumbbell',sets:3,reps:'10–15',rest:'75s',rir:'1–2'},
 {id:'close-grip-press',cat:'arms',sub:'triceps-full',en:'Close-Grip Bench Press',ar:'بنش قبضة ضيقة',eq:'barbell',sets:3,reps:'6–10',rest:'120s',rir:'1–2'},
 
-{id:'back-squat',cat:'legs',sub:'quads',en:'Back Squat',ar:'سكوات خلفي',eq:'barbell',sets:4,reps:'6–10',rest:'120–180s',rir:'1–2'},
+{id:'back-squat',cat:'legs',sub:'glutes',en:'Back Squat',ar:'سكوات خلفي',eq:'barbell',sets:4,reps:'6–10',rest:'120–180s',rir:'1–2'},
 {id:'hack-squat',cat:'legs',sub:'quads',en:'Hack Squat',ar:'هاك سكوات',eq:'machine',sets:4,reps:'8–12',rest:'120s',rir:'1–2'},
 {id:'leg-press',cat:'legs',sub:'quads',en:'Leg Press',ar:'ضغط الأرجل',eq:'machine',sets:4,reps:'8–12',rest:'120s',rir:'1–2'},
 {id:'leg-extension',cat:'legs',sub:'quads',en:'Leg Extension',ar:'تمديد الأرجل',eq:'machine',sets:3,reps:'10–15',rest:'60–75s',rir:'1–2'},
