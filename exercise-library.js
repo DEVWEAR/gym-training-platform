@@ -126,6 +126,8 @@ window.DEV_EXERCISES = [
 {id:'hip-adduction',cat:'legs',sub:'adductors',en:'Hip Adduction Machine',ar:'جهاز ضم الورك',eq:'machine',sets:3,reps:'12–20',rest:'60s',rir:'1–2'},
 {id:'standing-calf',cat:'legs',sub:'calves',en:'Standing Calf Raise',ar:'رفع سمانة واقف',eq:'machine',sets:4,reps:'10–15',rest:'60s',rir:'1–2'},
 {id:'seated-calf',cat:'legs',sub:'calves',en:'Seated Calf Raise',ar:'رفع سمانة جالس',eq:'machine',sets:4,reps:'10–15',rest:'60s',rir:'1–2'},
+{id:'smith-calf',cat:'legs',sub:'calves',en:'Smith Machine Calf Raise',ar:'رفع السمانة بجهاز السميث',eq:'machine',sets:4,reps:'10–15',rest:'60s',rir:'1–2'},
+{id:'single-leg-bodyweight-calf',cat:'legs',sub:'calves',en:'Single-Leg Bodyweight Calf Raise',ar:'رفع السمانة برجل واحدة بوزن الجسم',eq:'bodyweight',sets:3,reps:'12–20/side',rest:'45–60s',rir:'1–2'},
 
 {id:'cable-crunch',cat:'core',sub:'abs',en:'Cable Crunch',ar:'كرنش كيبل',eq:'cable',sets:3,reps:'10–15',rest:'60s',rir:'1–2'},
 {id:'machine-crunch',cat:'core',sub:'abs',en:'Ab Crunch Machine',ar:'كرنش بطن جهاز',eq:'machine',sets:3,reps:'10–15',rest:'60s',rir:'1–2'},
