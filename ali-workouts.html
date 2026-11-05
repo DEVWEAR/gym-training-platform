@@ -85,18 +85,32 @@ e('Mid Cable Fly','AE2DCC54-BFCA-40FB-9000-C1D648F5F653.png','3 × 12–15')]
 };
 const focus=['upper','middle','lower'][((week%3)+3)%3];
 const rotations={upper:['middle','upper','lower','upper','fly'],middle:['middle','upper','lower','middle','fly'],lower:['middle','upper','lower','lower','fly']};
-const slots=rotations[focus];let used=new Set(),barCount=0,smithCount=0;
+const slots=rotations[focus];let used=new Set(),barCount=0,smithCount=0,cableCount=0;
+const isCable=x=>/Cable/.test(x.name);
 chosen=slots.map((category,j)=>{
-let pool=chest[category],start=((week*7+j*3)%pool.length+pool.length)%pool.length;
-let options=pool.map((_,k)=>pool[(start+k)%pool.length]);
-let found=options.find(x=>{
+const pool=chest[category],start=((week*7+j*3)%pool.length+pool.length)%pool.length;
+const options=pool.map((_,k)=>pool[(start+k)%pool.length]);
+const valid=x=>{
 const bar=/Barbell|Bench Press/.test(x.name)&&!/Dumbbell|Smith/.test(x.name);
 const smith=/Smith/.test(x.name);
-return !used.has(x.name)&&(!bar||barCount<1)&&(!smith||smithCount<1);
-})||options.find(x=>!used.has(x.name))||options[0];
-used.add(found.name);if(/Barbell|Bench Press/.test(found.name)&&!/Dumbbell|Smith/.test(found.name))barCount++;if(/Smith/.test(found.name))smithCount++;
+return !used.has(x.name)&&(!bar||barCount<1)&&(!smith||smithCount<1)&&(!isCable(x)||cableCount<1);
+};
+let found=options.find(valid);
+if(!found){found=Object.values(chest).flat().find(x=>valid(x)&&!isCable(x));}
+if(!found)throw Error('No compatible chest exercise');
+used.add(found.name);
+if(/Barbell|Bench Press/.test(found.name)&&!/Dumbbell|Smith/.test(found.name))barCount++;
+if(/Smith/.test(found.name))smithCount++;
+if(isCable(found))cableCount++;
 return found;
 });
+// Guarantee exactly one cable exercise each week while retaining five unique exercises.
+if(cableCount===0){
+const cables=[...chest.upper,...chest.lower,...chest.fly].filter(isCable);
+const cable=cables[((week% cables.length)+cables.length)%cables.length];
+const replaceIndex=4;
+chosen[replaceIndex]=cable;
+}
 document.querySelector('header .sub').dataset.focus=focus;
 }const heading=section.querySelector('h2').outerHTML;const focusNote=i===0?('تركيز هذا الأسبوع: '+({upper:'الصدر العلوي',middle:'الصدر الوسط',lower:'الصدر السفلي'}[document.querySelector('header .sub').dataset.focus])+' · وسط أولاً، ثم علوي، ثم سفلي، ثم تفتيح. بدون تكرار نفس تمرين البار.'):notes[i];section.innerHTML=heading+'<p style="color:#aaa">'+focusNote+'</p>'+chosen.map((x,j)=>'<article class="exercise"><div class="details"><small>التمرين '+(j+1)+'</small><h2>'+x.name+'</h2><div class="sets">'+x.sets+'</div></div>'+(x.img?'<img loading="lazy" src="'+x.img+'" alt="'+x.name+'">':'<div class="noimg">الصورة غير مربوطة حالياً</div>')+'</article>').join('');});
 const fmt=d=>new Intl.DateTimeFormat('ar-AE',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(d));
