@@ -36,6 +36,11 @@ const plans=[
 [e('Standing Calf Raise','96CA31D4-CFB3-47D4-A8F3-654876870E8E.png','3 × 12–15'),e('Seated Calf Raise','9EDFFA53-5E1B-455C-88AF-2EC6A3C23069.png','3 × 12–15')]
 ]
 ];
+plans[1].push([e('Back Extension','1CAB5F3E-F6C0-43AF-8B0E-04FB38E57F7C.png','3 × 12–15')]);
+plans[2].splice(3,0,[e('Face Pull','8BF66587-CAF9-4327-A167-D92C25372435.png','2 × 12–15')]);
+plans[3].splice(2,0,[e('Incline Dumbbell Curl','2A7DF517-A434-4F44-81AA-AA924D17DA32.png')]);
+plans[3].splice(5,0,[e('Triceps Kickback',null,'2 × 12–15')]);
+plans[4].splice(3,0,[e('Bulgarian Split Squat','52EA435E-6753-43D1-B0A7-0060DD16D55A.png','2 × 10–12')]);
 const notes=['وسط → علوي → سفلي → تفتيح. تمرين واحد لكل زاوية.','سحب عمودي → تجديف → تجديف أحادي → عزل اللاتس.','ضغط كتف → جانبي → خلفي → مثلثات.','باي → هامر → تراي دفع → تراي فوق الرأس → سواعد.','سكوات → رباعية → خلفية → بطات.'];
 sections.forEach((section,i)=>{let chosen=plans[i].map((group,j)=>group[((week+i+j)%group.length+group.length)%group.length]);
 if(i===0){
